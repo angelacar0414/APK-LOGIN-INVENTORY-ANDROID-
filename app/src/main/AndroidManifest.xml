@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Aquí registramos las dos pantallas de la app. LoginActivity queda
+    como pantalla principal (la que abre primero, por eso tiene el
+    intent-filter con MAIN y LAUNCHER). BienvenidaActivity solo se
+    declara, porque a ella se llega desde el login con un Intent.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BienvenidaActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

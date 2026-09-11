@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Pantalla de inicio de sesión de INVENTORY.
+    Usamos un LinearLayout vertical porque solo necesitamos apilar
+    el título, los dos campos y el botón, uno debajo del otro.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#FFFFFF">
+
+    <!-- Título con el nombre del proyecto -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#1B2A4A"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inicia sesión para continuar"
+        android:textSize="14sp"
+        android:textColor="#6B7280"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Campo de usuario o correo -->
+    <EditText
+        android:id="@+id/etUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Usuario o correo"
+        android:inputType="textEmailAddress"
+        android:autofillHints="username"
+        android:layout_marginBottom="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#9CA3AF"/>
+
+    <!-- Campo de contraseña: inputType textPassword oculta lo que se escribe -->
+    <EditText
+        android:id="@+id/etContrasena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:layout_marginBottom="24dp"
+        android:textColor="#000000"
+        android:textColorHint="#9CA3AF"/>
+
+    <!-- Botón que dispara la validación en LoginActivity -->
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar sesión"
+        android:backgroundTint="#1B2A4A"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
